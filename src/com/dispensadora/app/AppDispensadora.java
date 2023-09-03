@@ -1,16 +1,19 @@
 package com.dispensadora.app;
 
+import com.dispensadora.dominio.Dispensadora;
+
 import java.util.Scanner;
 
 public class AppDispensadora {
     public static void main(String[] args) {
+        Dispensadora productos = new Dispensadora();
         Scanner scanner = new Scanner(System.in);
         int opcion;
 
         do {
             // Mostrar opciones del menú
             System.out.println("Menú Principal:");
-            System.out.println("1. AgregarSnack");
+            System.out.println("1. Agregar Snack");
             System.out.println("2. Sacar Snack Por Codigo");
             System.out.println("3. Sacar Snack Por Nombre");
             System.out.println("4. Aumentar Unidades a un Snack Por Codigo o Nombre");
@@ -29,8 +32,8 @@ public class AppDispensadora {
             // Realizar acciones según la opción seleccionada
             switch (opcion) {
                 case 1:
-                    System.out.println("Has seleccionado la Opción 1.");
-                    // Realiza la acción correspondiente a la Opción 1
+                    System.out.println("Agregar Snack");
+                    productos.agregarSnack("Gaseosa",432);
                     break;
                 case 2:
                     System.out.println("Has seleccionado la Opción 2.");

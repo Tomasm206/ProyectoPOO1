@@ -10,15 +10,19 @@ public class Agenda {
     }
     public void crearContacto(String nombre, String apellido, long celular){
         if (this.contactos.size() < 50 && buscarPorContaco(celular) == null) {
-            Contacto agregarContacto = new Contacto(nombre, apellido, celular); //editarParaAgregarDatos
+            Contacto agregarContacto = new Contacto(nombre, apellido, celular);
             this.contactos.add(agregarContacto);
+            System.out.println("Contacto Agregado Exitosamente...");
         }else{
-            System.out.println("El Contacto no pudo ser agregado"); //Esto debido a que ya existe o superó capacidad
+            System.out.println("El Contacto no pudo ser agregado..."); //Esto debido a que ya existe o superó capacidad
         }
     }
     public void borrarContacto(long celularABorrar){
-        if (this.buscarPorContaco(celularABorrar) != null) {
-            this.contactos.remove(this.buscarPorContaco(celularABorrar));
+        if (buscarPorContaco(celularABorrar) != null) {
+            this.contactos.remove(buscarPorContaco(celularABorrar));
+            System.out.println("El contacto ha sido eliminado.");
+        }else {
+            System.out.println("El contacto no existe en la agenda.");
         }
     }
     public List<Contacto> buscarPorNombre(String nombreABuscar) {
