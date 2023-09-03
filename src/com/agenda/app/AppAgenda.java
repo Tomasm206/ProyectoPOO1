@@ -29,7 +29,7 @@ public class AppAgenda {
                     System.out.println("*********** Crear un nuevo contacto. ***********");
                     biblioteca.crearContacto("Tomas","Marin",55555);
                     biblioteca.crearContacto("Valen","Marin",88888);
-                    biblioteca.crearContacto("laura","agudelo",22222);
+                    biblioteca.crearContacto("Selena","Quintanilla",22222);
                     break;
                 case 2://No Funciona
                     System.out.println("*********** Eliminar un contacto. ***********");
@@ -53,7 +53,7 @@ public class AppAgenda {
                     String apellidoABuscar = "Marin";
                     List<Contacto> contactosConApellEncontrados = biblioteca.buscarPorApellido(apellidoABuscar);
                     if (!contactosConApellEncontrados.isEmpty()) {
-                        System.out.println("Contactos encontrados con el Apellido '" + nombreABuscar + "':");
+                        System.out.println("Contactos encontrados con el Apellido '" + apellidoABuscar + "':");
                         for (Contacto contacto : contactosConApellEncontrados) {
                             System.out.println("Apellido: " + contacto.getApellido() +", Nombre " + contacto.getNombre() +  ", Celular: " + contacto.getCelular());
                         }
