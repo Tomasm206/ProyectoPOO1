@@ -32,11 +32,6 @@ public class AppAgenda {
                     System.out.println("Crear un nuevo contacto.");
                     int clse = 0;
                     while (clse<5){
-                        Scanner Scanner = new Scanner(System.in);
-                        System.out.print("Por favor ingrese el nombre: ");
-                        String nombre = scanner.nextLine();
-                        scanner.close();
-                        Contacto user1 = new Contacto(nombre, "apellido", 5555);
                         clse++;
                     }
                     break;
