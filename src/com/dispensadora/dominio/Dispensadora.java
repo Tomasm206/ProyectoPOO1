@@ -40,8 +40,10 @@ public class Dispensadora {
     public void aumentarSnackPorCodONom(int codigo, String nombre){
         List<Snack> snacksEncontrados = buscarPorNombre(nombre); //snacksEncontrados es una lista -- es diferente a snackEncontrado
         if (buscarSnackPorCod(codigo) != null && buscarSnackPorCod(codigo).getCantidad() < 6 && codigo != 0) {
-            buscarSnackPorCod(codigo).setCantidad(buscarSnackPorCod(codigo).getCantidad() + 1); //Falta Mostrar en pantalla cuando esté a su maxima capacidad
-            System.out.println("Has aumentado ->" + buscarSnackPorCod(codigo).getProducto() + "\nUnidades disponibles ->" + buscarSnackPorCod(codigo).getCantidad());
+            if (buscarSnackPorCod(codigo).getCantidad() < 6){
+                buscarSnackPorCod(codigo).setCantidad(buscarSnackPorCod(codigo).getCantidad() + 1); //Falta Mostrar en pantalla cuando esté a su maxima capacidad
+                System.out.println("Has aumentado ->" + buscarSnackPorCod(codigo).getProducto() + "\nUnidades disponibles ->" + buscarSnackPorCod(codigo).getCantidad());
+            }else System.out.println("Has llegado al maximo de unidades...");
         } else if (!buscarPorNombre(nombre).isEmpty() && nombre != "vacio") {
             Snack snackLocalizado = snacksEncontrados.get(0);
             int cantidadActual = snackLocalizado.getCantidad();
