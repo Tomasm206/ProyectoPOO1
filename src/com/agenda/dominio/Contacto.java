@@ -3,7 +3,7 @@ package com.agenda.dominio;
 public class Contacto {
     private String nombre;
     private String apellido;
-    protected long celular;
+    public long celular;
 
     public Contacto(String nombre, String apellido, long celular) { //Constructor
         this.nombre = nombre;
