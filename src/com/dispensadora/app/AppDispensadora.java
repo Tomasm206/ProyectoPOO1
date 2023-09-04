@@ -1,12 +1,14 @@
 package com.dispensadora.app;
 
 import com.dispensadora.dominio.Dispensadora;
+import com.dispensadora.dominio.Snack;
 
 import java.util.Scanner;
 
 public class AppDispensadora {
     public static void main(String[] args) {
-        Dispensadora productos = new Dispensadora();
+        System.out.println("El programa funciona.");
+        Dispensadora inventario = new Dispensadora();
         Scanner scanner = new Scanner(System.in);
         int opcion;
 
@@ -32,20 +34,26 @@ public class AppDispensadora {
             // Realizar acciones según la opción seleccionada
             switch (opcion) {
                 case 1:
-                    System.out.println("Agregar Snack");
-                    productos.agregarSnack("Gaseosa",432);
+                    System.out.println("********** Agregar Snack **********");
+                    inventario.agregarSnack("Gaseosa",432, 6, 2000);
+                    inventario.agregarSnack("Cheetos",578, 4, 1500);
+                    inventario.agregarSnack("Doritos",864, 5, 1800);
+                    inventario.agregarSnack("CocaCola",712, 2, 2200);
+                    inventario.agregarSnack("Sanduches",468, 3, 4000);
                     break;
                 case 2:
-                    System.out.println("Has seleccionado la Opción 2.");
-                    // Realiza la acción correspondiente a la Opción 2
+                    System.out.println("********** Sacar Snack Por Codigo **********");
+                    inventario.sacarSnackPorCod(578);
+                    System.out.println(inventario.buscarSnackPorCod(578).getCantidad());
                     break;
                 case 3:
-                    System.out.println("Has seleccionado la Opción 3.");
-                    // Realiza la acción correspondiente a la Opción 3
+                    System.out.println("********** Sacar Snack Por Nombre **********");
+                    inventario.sacarSnackPorNombre("Doritos");
                     break;
                 case 4:
-                    System.out.println("Has seleccionado la Opción 3.");
-                    // Realiza la acción correspondiente a la Opción 3
+                    System.out.println("********** Aumentar Unidades a un Snack Por Codigo o Nombre **********");
+                    inventario.aumentarSnackPorCodONom(468, "vacio");
+                    inventario.aumentarSnackPorCodONom(0, "CocaCola");
                     break;
                 case 5:
                     System.out.println("Has seleccionado la Opción 3.");
