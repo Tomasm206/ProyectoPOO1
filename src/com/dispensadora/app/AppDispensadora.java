@@ -60,23 +60,23 @@ public class AppDispensadora {
                     inventario.quitarSnack("CocaCola");
                     break;
                 case 6:
-                    System.out.println("Has seleccionado la Opción 3.");
-                    // Realiza la acción correspondiente a la Opción 6
+                    System.out.println("********** Obtener unidades disponibles de un Snack **********");
+                    inventario.obtenerUnidadesDisponiblesDeUnSnack("Gaseosa");
                     break;
                 case 7:
-                    System.out.println("Has seleccionado la Opción 3.");
+                    System.out.println("Has seleccionado la Opción 7.");
                     // Realiza la acción correspondiente a la Opción 7
                     break;
                 case 8:
-                    System.out.println("Has seleccionado la Opción 3.");
+                    System.out.println("Has seleccionado la Opción 8.");
                     // Realiza la acción correspondiente a la Opción 8
                     break;
                 case 9:
-                    System.out.println("Has seleccionado la Opción 3.");
+                    System.out.println("Has seleccionado la Opción 9.");
                     // Realiza la acción correspondiente a la Opción 9
                     break;
                 case 10:
-                    System.out.println("Has seleccionado la Opción 3.");
+                    System.out.println("Has seleccionado la Opción 10.");
                     // Realiza la acción correspondiente a la Opción 10
                     break;
                 case 11:

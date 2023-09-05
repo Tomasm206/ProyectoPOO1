@@ -61,9 +61,23 @@ public class Dispensadora {
             System.out.println(producto + " Ha sido eliminado...");
         }else System.out.println("Este producto no existe en el inventario");
     }
-    public int unidadesDisponiblesDeUnSnack(String producto){
-        // Codigo
+    public int obtenerUnidadesDisponiblesDeUnSnack(String producto){
+        if (!buscarPorNombre(producto).isEmpty()){
+            System.out.println("---");
+        }
         return 0;
+    }
+    public List<Snack> obtenerNombreProductosAgotados(){
+        return this.productos;
+    }
+    public List<Snack> obtenerNombreYUnidadesDisponibles(){
+        return this.productos;
+    }
+    public List<Snack> obtenerSnacksOrdenadosPorPrecioDecendente(){
+        return this.productos;
+    }
+    public List<Snack> obtenerSnacksOrdenadosPorCantidadAcendente(){
+        return this.productos;
     }
     //Funciones Extras
     public int cantidadMaxima(int cantidad){
