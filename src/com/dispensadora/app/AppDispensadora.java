@@ -56,31 +56,31 @@ public class AppDispensadora {
                     inventario.aumentarSnackPorCodONom(0, "CocaCola");
                     break;
                 case 5:
-                    System.out.println("Has seleccionado la Opción 3.");
-                    // Realiza la acción correspondiente a la Opción 3
+                    System.out.println("********** Quitar un Snack **********");
+                    inventario.quitarSnack("CocaCola");
                     break;
                 case 6:
                     System.out.println("Has seleccionado la Opción 3.");
-                    // Realiza la acción correspondiente a la Opción 3
+                    // Realiza la acción correspondiente a la Opción 6
                     break;
                 case 7:
                     System.out.println("Has seleccionado la Opción 3.");
-                    // Realiza la acción correspondiente a la Opción 3
+                    // Realiza la acción correspondiente a la Opción 7
                     break;
                 case 8:
                     System.out.println("Has seleccionado la Opción 3.");
-                    // Realiza la acción correspondiente a la Opción 3
+                    // Realiza la acción correspondiente a la Opción 8
                     break;
                 case 9:
                     System.out.println("Has seleccionado la Opción 3.");
-                    // Realiza la acción correspondiente a la Opción 3
+                    // Realiza la acción correspondiente a la Opción 9
                     break;
                 case 10:
                     System.out.println("Has seleccionado la Opción 3.");
-                    // Realiza la acción correspondiente a la Opción 3
+                    // Realiza la acción correspondiente a la Opción 10
                     break;
                 case 11:
-                    System.out.println("Saliendo del programa. ¡Hasta luego!");
+                    System.out.println("Saliendo del programa... ¡Hasta luego!");
                     break;
                 default:
                     System.out.println("Opción no válida. Inténtalo de nuevo.");

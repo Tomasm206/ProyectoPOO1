@@ -53,10 +53,13 @@ public class Dispensadora {
             } else {
                 System.out.println("El producto " + nombre + " esta a su maxima capacidad");
             }
-        }
+        }else System.out.println("El producto no existe en el inventario");
     }
     public void quitarSnack(String producto){
-        //Codigo
+        if (!buscarPorNombre(producto).isEmpty()){
+            this.productos.removeIf(product -> product.getProducto().equalsIgnoreCase(producto));
+            System.out.println(producto + " Ha sido eliminado...");
+        }else System.out.println("Este producto no existe en el inventario");
     }
     public int unidadesDisponiblesDeUnSnack(String producto){
         // Codigo

@@ -48,13 +48,12 @@ public class Agenda {
             System.out.println("El contacto no existe en la Agenda. ");
         }
     }
-    public void ordenarContactosAlfabeticamente() {
-        Collections.sort(contactos, new Comparator<Contacto>() {
-            @Override
-            public int compare(Contacto contacto1, Contacto contacto2) {
-                return contacto1.getNombre().compareToIgnoreCase(contacto2.getNombre());
-            }
-        });
+    public List<Contacto> ordenarContactosAlfabeticamente() {
+        this.contactos.sort(
+                Comparator.comparing(Contacto::getNombre)
+                        .thenComparing(Contacto::getApellido)
+        );
+        return this.contactos;
     }
     //Extras
     public List<Contacto> getContactos() {
