@@ -64,20 +64,20 @@ public class AppDispensadora {
                     inventario.obtenerUnidadesDisponiblesDeUnSnack("Gaseosa");
                     break;
                 case 7:
-                    System.out.println("Has seleccionado la Opción 7.");
-                    // Realiza la acción correspondiente a la Opción 7
+                    System.out.println("********** Obtener Nombre de Unidades Agotadas de un Snack **********");
+                    // Código
                     break;
                 case 8:
-                    System.out.println("Has seleccionado la Opción 8.");
-                    // Realiza la acción correspondiente a la Opción 8
+                    System.out.println("********** Obtener el nombre y la cantidad de unidades disponibles en el dispensador **********");
+                    // Código
                     break;
                 case 9:
-                    System.out.println("Has seleccionado la Opción 9.");
-                    // Realiza la acción correspondiente a la Opción 9
+                    System.out.println("********** Obtener la lista de snacks ordenada por su valor de mayor a menor. **********");
+                    inventario.obtenerSnacksOrdenadosPorValorAcendente().forEach(precio -> System.out.println(precio.getProducto() + " -> " + precio.getPrecio()));
                     break;
                 case 10:
-                    System.out.println("Has seleccionado la Opción 10.");
-                    // Realiza la acción correspondiente a la Opción 10
+                    System.out.println("********** Obtener la lista de snacks ordenada por su cantidad de menor a mayor. **********");
+                    inventario.obtenerSnacksOrdenadosPorCantidadDecendente().forEach(cantid -> System.out.println(cantid.getProducto() + " -> " + cantid.getCantidad() + " Und."));
                     break;
                 case 11:
                     System.out.println("Saliendo del programa... ¡Hasta luego!");

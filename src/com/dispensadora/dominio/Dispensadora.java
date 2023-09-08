@@ -1,6 +1,7 @@
 package com.dispensadora.dominio;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class Dispensadora {
@@ -63,7 +64,7 @@ public class Dispensadora {
     }
     public int obtenerUnidadesDisponiblesDeUnSnack(String producto){
         if (!buscarPorNombre(producto).isEmpty()){
-            System.out.println("---");
+            System.out.println(producto + " cuenta con -> " + buscarPorNombre(producto));
         }
         return 0;
     }
@@ -73,10 +74,16 @@ public class Dispensadora {
     public List<Snack> obtenerNombreYUnidadesDisponibles(){
         return this.productos;
     }
-    public List<Snack> obtenerSnacksOrdenadosPorPrecioDecendente(){
+    public List<Snack> ordenarProductosPorPrecio() {
+        return productos;
+    }
+
+    public List<Snack> obtenerSnacksOrdenadosPorValorAcendente(){
+        this.productos.sort(Comparator.comparingLong(Snack::getPrecio).reversed());
         return this.productos;
     }
-    public List<Snack> obtenerSnacksOrdenadosPorCantidadAcendente(){
+    public List<Snack> obtenerSnacksOrdenadosPorCantidadDecendente(){
+        this.productos.sort(Comparator.comparingInt(Snack::getCantidad));
         return this.productos;
     }
     //Funciones Extras
