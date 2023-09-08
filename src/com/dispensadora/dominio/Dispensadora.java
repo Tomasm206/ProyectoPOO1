@@ -62,22 +62,30 @@ public class Dispensadora {
             System.out.println(producto + " Ha sido eliminado...");
         }else System.out.println("Este producto no existe en el inventario");
     }
-    public int obtenerUnidadesDisponiblesDeUnSnack(String producto){
+    public void obtenerUnidadesDisponiblesDeUnSnack(String producto){
+        List<Snack> snakEncontrados = buscarPorNombre(producto);
         if (!buscarPorNombre(producto).isEmpty()){
-            System.out.println(producto + " cuenta con -> " + buscarPorNombre(producto));
+            for (Snack snack : snakEncontrados) {
+                System.out.println(producto + " cuenta con -> " + snack.getCantidad());
+            }
         }
-        return 0;
     }
     public List<Snack> obtenerNombreProductosAgotados(){
-        return this.productos;
+        for (Snack snack : this.productos){
+            if (snack.getCantidad()==0){
+                System.out.println(snack.getProducto() + " Se encuentra agotado.");
+            }
+        }
+        return this.productos; //Creo que esto es inecesario
     }
     public List<Snack> obtenerNombreYUnidadesDisponibles(){
-        return this.productos;
+        for (Snack productosSnack : this.productos){
+            if (productosSnack.getCantidad() > 0){
+                System.out.println(productosSnack.getProducto() + " Posee una cantidad de -> "+ productosSnack.getCantidad() + " Unidades");
+            }
+        }
+        return this.productos; //Creo que esto es inecesario
     }
-    public List<Snack> ordenarProductosPorPrecio() {
-        return productos;
-    }
-
     public List<Snack> obtenerSnacksOrdenadosPorValorAcendente(){
         this.productos.sort(Comparator.comparingLong(Snack::getPrecio).reversed());
         return this.productos;

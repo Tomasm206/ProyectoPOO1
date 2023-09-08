@@ -36,10 +36,12 @@ public class AppDispensadora {
                 case 1:
                     System.out.println("********** Agregar Snack **********");
                     inventario.agregarSnack("Gaseosa",432, 6, 2000);
-                    inventario.agregarSnack("Cheetos",578, 4, 1500);
+                    inventario.agregarSnack("Cheetos",578, 0, 1500);
                     inventario.agregarSnack("Doritos",864, 5, 1800);
                     inventario.agregarSnack("CocaCola",712, 2, 2200);
                     inventario.agregarSnack("Sanduches",468, 3, 4000);
+                    inventario.agregarSnack("Gomitas",478, 0, 1000);
+                    inventario.agregarSnack("Chocolate",687, 0, 2500);
                     break;
                 case 2:
                     System.out.println("********** Sacar Snack Por Codigo **********");
@@ -62,14 +64,16 @@ public class AppDispensadora {
                 case 6:
                     System.out.println("********** Obtener unidades disponibles de un Snack **********");
                     inventario.obtenerUnidadesDisponiblesDeUnSnack("Gaseosa");
+                    inventario.obtenerUnidadesDisponiblesDeUnSnack("Sanduches");
+                    inventario.obtenerUnidadesDisponiblesDeUnSnack("Chocolate");
                     break;
                 case 7:
                     System.out.println("********** Obtener Nombre de Unidades Agotadas de un Snack **********");
-                    // Código
+                    inventario.obtenerNombreProductosAgotados();
                     break;
                 case 8:
                     System.out.println("********** Obtener el nombre y la cantidad de unidades disponibles en el dispensador **********");
-                    // Código
+                    inventario.obtenerNombreYUnidadesDisponibles();
                     break;
                 case 9:
                     System.out.println("********** Obtener la lista de snacks ordenada por su valor de mayor a menor. **********");
