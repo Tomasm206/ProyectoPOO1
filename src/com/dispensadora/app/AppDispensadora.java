@@ -54,8 +54,8 @@ public class AppDispensadora {
                     break;
                 case 4:
                     System.out.println("********** Aumentar Unidades a un Snack Por Codigo o Nombre **********");
-                    inventario.aumentarSnackPorCodONom(468, "vacio");
-                    inventario.aumentarSnackPorCodONom(0, "CocaCola");
+                    inventario.aumentarSnackPorCodONom(468, "vacio"); //-> vacio <- para cuando se busque por codigo
+                    inventario.aumentarSnackPorCodONom(0, "CocaCola"); //-> 0 <- para cuando se busque por nombre
                     break;
                 case 5:
                     System.out.println("********** Quitar un Snack **********");
