@@ -16,7 +16,7 @@ public class Dispensadora {
         System.out.println("Se han agregado los productos correctamente...");
     }
     public void sacarSnackPorCod(int codigo){
-        if(buscarSnackPorCod(codigo) != null && buscarSnackPorCod(codigo).getCantidad() >= 0){
+        if(buscarSnackPorCod(codigo) != null && buscarSnackPorCod(codigo).getCantidad() > 0){
             buscarSnackPorCod(codigo).setCantidad(buscarSnackPorCod(codigo).getCantidad() - 1);
             System.out.println("Has sacado " + buscarSnackPorCod(codigo).getProducto());
         }else {

@@ -36,7 +36,7 @@ public class AppDispensadora {
                 case 1:
                     System.out.println("********** Agregar Snack **********");
                     inventario.agregarSnack("Gaseosa",432, 6, 2000);
-                    inventario.agregarSnack("Cheetos",578, 0, 1500);
+                    inventario.agregarSnack("Cheetos",578, 1, 1500);
                     inventario.agregarSnack("Doritos",864, 5, 1800);
                     inventario.agregarSnack("CocaCola",712, 2, 2200);
                     inventario.agregarSnack("Sanduches",468, 3, 4000);

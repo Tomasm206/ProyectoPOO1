@@ -32,6 +32,8 @@ public class AppAgenda {
                         biblioteca.crearContacto(biblioteca.pedirDatosTipoStr("Nombre"), biblioteca.pedirDatosTipoStr("apellido"), biblioteca.pedirDatosTipoLong());
                         terminar = biblioteca.pedirDatosTipoBoolean();
                     }
+                    //Para agregar multiples contactos instantaneamente cambiar terminar por false
+                    //biblioteca.crearContacto("Nombre","Apellido",9999);
                     System.out.println("*************************************************\n");
                     break;
                 case 2:
